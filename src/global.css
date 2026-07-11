@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap');
+
+:root {
+  /* Sage Green Scale */
+  --primary-50: #F8FAFA;
+  --primary-100: #F0F5F4;
+  --primary-200: #DCE8E6;
+  --primary-300: #B6D3CD;
+  --primary-400: #93B8B1;
+  --primary-500: #709D94; /* Main Brand Color */
+  --primary-600: #5C8A80;
+  --primary-700: #4D7068;
+  --primary-800: #34495E; /* Slate */
+  --primary-900: #2C3E50; /* Navy */
+  --primary-950: #1A242F;
+  --white: #FFFFFF;
+
+  /* Brand Accents */
+  --brand-action: #709D94;
+  --brand-secondary: #DCE8E6;
+  --brand-dark: #2C3E50;
+
+  /* Typography Families */
+  --font-heading: 'Manrope', sans-serif; 
+  --font-editorial: 'Playfair Display', serif;
+  --font-body: 'Outfit', sans-serif;
+}
+
+/* Theme Scoping to Device */
+.device[data-theme="light"] {
+  --bg-main: var(--white);
+  --bg-card: var(--white);
+  --bg-secondary: var(--primary-50);
+  --btn-glass: rgba(255, 255, 255, 0.7);
+  --text-primary: var(--primary-950);
+  --text-secondary: var(--primary-600);
+  --border-color: var(--primary-100);
+  --border-input: var(--primary-200);
+}
+
+.device[data-theme="dark"] {
+  --bg-main: #1a1d23;
+  --bg-card: #242830;
+  --bg-secondary: #2c313c;
+  --btn-glass: rgba(36, 40, 48, 0.7);
+  --text-primary: var(--primary-50);
+  --text-secondary: var(--primary-400);
+  --border-color: var(--primary-800);
+  --border-input: var(--primary-700);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.mt-32 {
+  margin-top: 32px;
+}
+
+/* Global Back Button */
+.back-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: all 0.2s;
+  padding: 0;
+  flex-shrink: 0;
+}
+.back-btn:active {
+  transform: scale(0.95);
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #FDFDFD; /* Clean canvas background */
+  color: #111;
+  -webkit-font-smoothing: antialiased;
+}

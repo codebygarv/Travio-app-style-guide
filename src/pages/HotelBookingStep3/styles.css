@@ -1,0 +1,129 @@
+.booking-summary-card {
+  background-color: transparent;
+  border: 1px solid var(--border-input);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.booking-summary-card h3 {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.summary-details {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 16px 0;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.summary-price {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.mt-32 {
+  margin-top: 32px;
+}
+
+/* Payment Options */
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-color);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.payment-option:last-child {
+  border-bottom: none;
+}
+
+.payment-option.selected {
+  background-color: transparent;
+}
+
+.payment-icon-wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background-color: var(--bg-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-secondary);
+}
+
+.payment-option.selected .payment-icon-wrapper {
+  background-color: var(--bg-card);
+  color: var(--brand-action);
+}
+
+.payment-info {
+  flex: 1;
+}
+
+.payment-info h4 {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.payment-info p {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.radio-circle.selected {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: var(--brand-action);
+}
+
+.radio-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--brand-action);
+}
+
+.flex-column {
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.secure-payment {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-weight: 600;
+  width: 100%;
+  justify-content: center;
+}

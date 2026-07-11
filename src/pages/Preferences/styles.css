@@ -1,0 +1,100 @@
+.pref-screen-premium {
+  background-color: var(--bg-main);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pref-header-premium {
+  padding: 48px 24px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-main);
+}
+
+.pref-header-premium h2 {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.pref-scroll-premium {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 24px 24px;
+}
+.pref-scroll-premium::-webkit-scrollbar { display: none; }
+
+.pref-group-premium {
+  margin-bottom: 24px;
+}
+
+.pref-group-premium h3 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  padding: 0 4px;
+}
+
+.pref-card-group {
+  background-color: var(--bg-card);
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.01);
+  overflow: hidden;
+}
+
+.pref-card-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pref-card-item:last-child {
+  border-bottom: none;
+}
+
+.pref-card-item:active {
+  background-color: var(--bg-secondary);
+}
+
+.pref-item-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.pref-icon {
+  color: var(--text-secondary);
+}
+
+.pref-card-item span {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.pref-card-item.active .pref-icon {
+  color: var(--brand-action);
+}
+
+.pref-card-item.active span {
+  font-weight: 700;
+}
+
+.check-icon {
+  color: var(--brand-action);
+}
+
+.spacer-40 {
+  height: 40px;
+}

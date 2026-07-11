@@ -1,0 +1,128 @@
+.profile-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 0 100px;
+}
+
+.scroll-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Header */
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 24px 32px;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.profile-avatar-wrapper {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 16px;
+  border: 4px solid var(--white);
+  box-shadow: 0 4px 12px rgba(112, 157, 148, 0.15);
+}
+
+.profile-avatar-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-header h2 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.profile-header p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.edit-profile-btn {
+  padding: 8px 20px;
+  border-radius: 999px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--brand-action);
+  color: var(--brand-action);
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+/* Settings Groups */
+.settings-group {
+  margin-top: 32px;
+  padding: 0 24px;
+}
+
+.settings-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  font-weight: 700;
+  margin-bottom: 12px;
+  padding-left: 8px;
+}
+
+.setting-item {
+  display: flex;
+  align-items: center;
+  padding: 16px 8px;
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.setting-item:last-child {
+  border-bottom: none;
+}
+
+.setting-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  margin-right: 16px;
+}
+
+.setting-icon {
+  color: var(--text-secondary);
+}
+
+.setting-name {
+  flex: 1;
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.setting-value {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.setting-chevron {
+  color: var(--text-secondary);
+  opacity: 0.5;
+}
+
+.logout-item {
+  margin-top: 8px;
+}

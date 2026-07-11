@@ -1,0 +1,138 @@
+.app-screen {
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-main);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.auth-screen {
+  padding: 40px 24px;
+  justify-content: center;
+}
+
+.auth-header {
+  margin-bottom: 40px;
+}
+
+.auth-title {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.auth-subtitle {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  color: var(--primary-500);
+}
+
+.form-input {
+  width: 100%;
+  padding: 16px 16px 16px 44px;
+  border-radius: 16px;
+  border: 1px solid var(--border-input);
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-size: 14px;
+  font-family: var(--font-body);
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: var(--brand-action);
+  box-shadow: 0 0 0 3px rgba(112, 157, 148, 0.1);
+}
+
+.auth-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--border-input);
+}
+
+.auth-divider span {
+  padding: 0 16px;
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.auth-footer {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.auth-footer span {
+  color: var(--brand-action);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.social-auth {
+  display: flex;
+  gap: 16px;
+}
+
+.btn-social {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px;
+  border-radius: 16px;
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-input);
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-social:hover {
+  background-color: var(--bg-secondary);
+}

@@ -1,0 +1,108 @@
+.otp-screen {
+  background-color: var(--bg-main);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.otp-header {
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.icon-btn-ghost {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  margin-left: -8px;
+  cursor: pointer;
+}
+
+.otp-content {
+  flex: 1;
+}
+
+.otp-title {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.otp-subtitle {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+.otp-subtitle strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.otp-inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.otp-input {
+  width: 40px;
+  height: 48px;
+  border-radius: 12px;
+  border: 1px solid var(--border-input);
+  background-color: var(--bg-secondary);
+  text-align: center;
+  font-size: 20px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--text-primary);
+  outline: none;
+  transition: all 0.2s;
+}
+
+.otp-input.filled {
+  border-color: var(--brand-action);
+  background-color: var(--bg-card);
+}
+
+.otp-input.focused {
+  border-color: var(--brand-action);
+  border-width: 2px;
+  background-color: var(--bg-card);
+}
+
+.otp-resend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.text-btn {
+  background: none;
+  border: none;
+  color: var(--brand-action);
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.otp-footer {
+  margin-top: auto;
+  padding-bottom: 24px;
+}

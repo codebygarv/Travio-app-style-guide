@@ -1,0 +1,42 @@
+.presentation-canvas {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 40px;
+  padding-top: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 25px;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.presentation-text {
+  min-width: 320px;
+  /* max-width: 380px; */
+  flex-shrink: 0;
+}
+
+.presentation-text h4 {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  color: var(--primary-500);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.presentation-text h1 {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  color: var(--primary-950);
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.presentation-text p {
+  font-size: 14px;
+  color: var(--primary-600);
+  line-height: 1.5;
+}

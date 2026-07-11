@@ -1,0 +1,275 @@
+.hotel-details-screen {
+  background-color: var(--bg-main);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.hotel-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 24px;
+}
+.hotel-scroll::-webkit-scrollbar { display: none; }
+
+.hotel-hero {
+  height: 340px;
+  position: relative;
+}
+
+.hotel-hero-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+}
+
+.hotel-top-bar {
+  position: absolute;
+  top: 48px;
+  left: 24px;
+  right: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.hotel-content {
+  padding: 24px;
+}
+
+.hotel-header-info {
+  margin-bottom: 28px;
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.title-row h1 {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+.hotel-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: var(--bg-secondary);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--text-primary);
+  flex-shrink: 0;
+  border: 1px solid var(--border-input);
+}
+
+.hotel-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.hotel-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.highlight-tag {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  background-color: rgba(112, 157, 148, 0.1);
+  color: var(--brand-action);
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.amenities-section {
+  margin-bottom: 28px;
+}
+
+.amenities-section h3, .hotel-description h3, .hotel-photos-section h3 {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.amenities-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.amenity-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.amenity-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background-color: var(--bg-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--brand-action);
+  border: 1px solid var(--border-input);
+}
+
+.amenity-item span {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.hotel-description {
+  margin-bottom: 28px;
+}
+
+.hotel-description p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.hotel-description .read-more {
+  color: var(--brand-action);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.select-room-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-input);
+  border-radius: 16px;
+  margin-bottom: 28px;
+  cursor: pointer;
+}
+
+.room-info h4 {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.room-info p {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.hotel-photos-scroll {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: 8px;
+}
+.hotel-photos-scroll::-webkit-scrollbar { display: none; }
+
+.hotel-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.similar-hotel-card {
+  width: 160px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.similar-image {
+  width: 100%;
+  height: 120px;
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 8px;
+}
+
+.similar-hotel-card h4 {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.similar-hotel-card p {
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+/* Bottom Bar */
+.hotel-bottom-bar {
+  padding: 16px 24px 32px;
+  background-color: var(--bg-main);
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.price-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 2px;
+}
+
+.price-value {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.price-value .currency {
+  font-size: 18px;
+  margin-right: 2px;
+}
+
+.book-btn {
+  flex: 1;
+  margin-bottom: 0;
+}
