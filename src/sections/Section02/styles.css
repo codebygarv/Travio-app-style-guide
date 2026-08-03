@@ -1,3 +1,141 @@
 .bg-alt {
   background-color: #F4F6F6; /* Slightly darker background to separate sections */
+  padding-top: 48px;
+  padding-bottom: 64px;
+}
+
+.bg-dark {
+  background-color: var(--primary-950);
+  color: var(--primary-50);
+  padding-top: 48px;
+  padding-bottom: 64px;
+}
+
+/* Workflow Groups Container */
+.workflow-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  width: 100%;
+}
+
+/* Individual Workflow Group */
+.workflow-group {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  border-top: 1px solid var(--primary-200);
+  padding-top: 36px;
+}
+
+.workflow-header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 760px;
+}
+
+.workflow-header h2 {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-950);
+}
+
+.workflow-header p {
+  font-size: 14px;
+  color: var(--primary-600);
+  line-height: 1.5;
+}
+
+/* Screen Showcase Item Wrapper */
+.screen-showcase-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 320px;
+  flex-shrink: 0;
+}
+
+/* Screen Metadata Above Phone */
+.screen-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 115px; /* Keeps phone mockups aligned evenly across the row */
+  padding-right: 8px;
+}
+
+.screen-header-badges {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.screen-number {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary-500);
+  background: var(--primary-100);
+  padding: 4px 10px;
+  border-radius: 6px;
+  letter-spacing: 0.05em;
+}
+
+.screen-tag {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background-color: var(--brand-secondary);
+  color: var(--primary-800);
+  letter-spacing: 0.02em;
+}
+
+.screen-title {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-950);
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+.screen-description {
+  font-size: 13px;
+  color: var(--primary-600);
+  line-height: 1.5;
+}
+
+/* Dark theme showcase styling for Section 03 */
+.bg-dark .presentation-text h1,
+.bg-dark .workflow-header h2,
+.bg-dark .screen-title {
+  color: var(--white);
+}
+
+.bg-dark .presentation-text h4 {
+  color: var(--primary-400);
+}
+
+.bg-dark .presentation-text p,
+.bg-dark .workflow-header p,
+.bg-dark .screen-description {
+  color: var(--primary-300);
+}
+
+.bg-dark .workflow-group {
+  border-top-color: var(--primary-800);
+}
+
+.bg-dark .screen-number {
+  background-color: var(--primary-900);
+  color: var(--primary-400);
+}
+
+.bg-dark .screen-tag {
+  background-color: var(--primary-800);
+  color: var(--primary-200);
 }
