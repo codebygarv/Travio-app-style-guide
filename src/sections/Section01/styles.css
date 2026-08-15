@@ -10,6 +10,7 @@
   min-height: 100vh;
   width: 100%;
   overflow-x: auto;
+  scroll-margin-top: calc(var(--nav-height) + 20px);
 }
 
 .presentation-text {

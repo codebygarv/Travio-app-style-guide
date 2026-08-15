@@ -1,6 +1,10 @@
-import { Search, SlidersHorizontal, MapPin, Star, Ticket, Utensils } from 'lucide-react';
+import { Search, SlidersHorizontal, MapPin, Ticket, Utensils } from 'lucide-react';
 import BottomNav from '../../components/BottomNav';
+import Card from '../../components/Card';
+import { attractions, experiences, dining } from '../../data/places';
 import './styles.css';
+
+const trendingNearYouIds = ['albert-hall', 'nahargarh-fort'];
 
 const Home = () => (
   <div className="app-screen home-screen">
@@ -52,61 +56,18 @@ const Home = () => (
         </div>
         
         <div className="places-feed small-cards">
-          <div className="place-card small">
-            <div className="place-image bg-hawa">
-              <span className="location-badge">2.0 km</span>
-            </div>
-            <div className="place-info">
-              <h3>Hawa Mahal</h3>
-              <div className="place-meta">
-                <span className="rating"><Star size={10} fill="#F59E0B" color="#F59E0B" /> 4.9</span>
-                <span className="category-dot">•</span>
-                <span className="category-text">Palace</span>
-              </div>
-            </div>
-          </div>
-          
-          <div className="place-card small">
-            <div className="place-image bg-amer">
-              <span className="location-badge">11 km</span>
-            </div>
-            <div className="place-info">
-              <h3>Amer Fort</h3>
-              <div className="place-meta">
-                <span className="rating"><Star size={10} fill="#F59E0B" color="#F59E0B" /> 4.8</span>
-                <span className="category-dot">•</span>
-                <span className="category-text">Heritage</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="place-card small">
-            <div className="place-image bg-jal">
-              <span className="location-badge">7.5 km</span>
-            </div>
-            <div className="place-info">
-              <h3>Jal Mahal</h3>
-              <div className="place-meta">
-                <span className="rating"><Star size={10} fill="#F59E0B" color="#F59E0B" /> 4.7</span>
-                <span className="category-dot">•</span>
-                <span className="category-text">Lake Palace</span>
-              </div>
-            </div>
-          </div>
-          
-          <div className="place-card small">
-            <div className="place-image bg-citypalace">
-              <span className="location-badge">2.2 km</span>
-            </div>
-            <div className="place-info">
-              <h3>City Palace</h3>
-              <div className="place-meta">
-                <span className="rating"><Star size={10} fill="#F59E0B" color="#F59E0B" /> 4.8</span>
-                <span className="category-dot">•</span>
-                <span className="category-text">Heritage</span>
-              </div>
-            </div>
-          </div>
+          {attractions.slice(0, 4).map((place) => (
+            <Card
+              key={place.id}
+              layout="grid"
+              className="place-card-sm"
+              image={place.image}
+              badge={place.distance}
+              title={place.name}
+              rating={place.rating}
+              meta={place.category}
+            />
+          ))}
         </div>
       </div>
 
@@ -129,25 +90,19 @@ const Home = () => (
         </div>
         
         <div className="experiences-feed">
-          <div className="experience-card">
-            <div className="experience-image bg-balloon">
-              <span className="price-badge">₹12,000</span>
-            </div>
-            <div className="experience-info">
-              <h3>Hot Air Balloon Safari</h3>
-              <p><Ticket size={12} className="inline-icon" /> 1 hour • Adventure</p>
-            </div>
-          </div>
-          
-          <div className="experience-card">
-            <div className="experience-image bg-walk">
-              <span className="price-badge">₹1,500</span>
-            </div>
-            <div className="experience-info">
-              <h3>Pink City Heritage Walk</h3>
-              <p><Ticket size={12} className="inline-icon" /> 3 hours • Guided</p>
-            </div>
-          </div>
+          {experiences.map((exp) => (
+            <Card
+              key={exp.id}
+              layout="grid"
+              className="experience-card-wide"
+              image={exp.image}
+              badge={`₹${exp.price.toLocaleString('en-IN')}`}
+              badgePosition="bottom-left"
+              title={exp.name}
+              metaIcon={<Ticket size={12} className="inline-icon" />}
+              meta={`${exp.duration} • ${exp.category}`}
+            />
+          ))}
         </div>
       </div>
 
@@ -158,23 +113,19 @@ const Home = () => (
         </div>
         
         <div className="trending-list">
-          <div className="trending-item">
-            <div className="trending-image bg-albert"></div>
-            <div className="trending-content">
-              <h3>Albert Hall Museum</h3>
-              <p>Stunning Indo-Saracenic architecture and artifacts.</p>
-              <span className="distance-text"><MapPin size={10} /> 3.1 km away</span>
-            </div>
-          </div>
-
-          <div className="trending-item">
-            <div className="trending-image bg-nahargarh"></div>
-            <div className="trending-content">
-              <h3>Nahargarh Fort</h3>
-              <p>Panoramic sunset views of the entire pink city.</p>
-              <span className="distance-text"><MapPin size={10} /> 14.5 km away</span>
-            </div>
-          </div>
+          {attractions
+            .filter((place) => trendingNearYouIds.includes(place.id))
+            .map((place) => (
+              <Card
+                key={place.id}
+                layout="row"
+                image={place.image}
+                title={place.name}
+                description={place.description}
+                metaIcon={<MapPin size={10} />}
+                meta={`${place.distance} away`}
+              />
+            ))}
         </div>
       </div>
 
@@ -185,28 +136,22 @@ const Home = () => (
         </div>
         
         <div className="trending-list">
-          <div className="trending-item">
-            <div className="trending-image bg-chokhi"></div>
-            <div className="trending-content">
-              <h3>Chokhi Dhani</h3>
-              <p>Authentic Rajasthani village resort and thali.</p>
-              <span className="distance-text"><Utensils size={10} /> 18 km • Rajasthani</span>
-            </div>
-          </div>
-
-          <div className="trending-item">
-            <div className="trending-image bg-lmb"></div>
-            <div className="trending-content">
-              <h3>LMB (Laxmi Mishthan)</h3>
-              <p>Legendary spot for traditional sweets and snacks.</p>
-              <span className="distance-text"><Utensils size={10} /> 1.5 km • Indian Sweets</span>
-            </div>
-          </div>
+          {dining.map((spot) => (
+            <Card
+              key={spot.id}
+              layout="row"
+              image={spot.image}
+              title={spot.name}
+              description={spot.description}
+              metaIcon={<Utensils size={10} />}
+              meta={`${spot.distance} • ${spot.category}`}
+            />
+          ))}
         </div>
       </div>
 
     </div>
-    
+
     <BottomNav active="home" />
   </div>
 );

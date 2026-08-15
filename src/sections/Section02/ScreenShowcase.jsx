@@ -7,15 +7,19 @@ import SkeletonFeed from '../../pages/SkeletonFeed';
 import Home from '../../pages/Home';
 import Feed from '../../pages/Feed';
 import SearchActive from '../../pages/SearchActive';
+import SearchNoResults from '../../pages/SearchNoResults';
+import FlightSearch from '../../pages/FlightSearch';
 import Explore from '../../pages/Explore';
 import Chat from '../../pages/Chat';
 import PlaceDetails from '../../pages/PlaceDetails';
 import HotelDetails from '../../pages/HotelDetails';
+import Reviews from '../../pages/Reviews';
 import HotelBookingStep1 from '../../pages/HotelBookingStep1';
 import HotelBookingStep2 from '../../pages/HotelBookingStep2';
 import HotelBookingStep3 from '../../pages/HotelBookingStep3';
 import BookingSuccess from '../../pages/BookingSuccess';
 import SavedPlaces from '../../pages/SavedPlaces';
+import SavedPlacesEmpty from '../../pages/SavedPlacesEmpty';
 import MyTrips from '../../pages/MyTrips';
 import Notifications from '../../pages/Notifications';
 import Profile from '../../pages/Profile';
@@ -98,13 +102,27 @@ const workflowGroups = [
       },
       {
         id: '10',
+        title: 'Search: No Results',
+        tag: 'UI State',
+        description: 'Empty search-results state guiding travelers to broaden filters or explore trending categories instead.',
+        Component: SearchNoResults,
+      },
+      {
+        id: '11',
+        title: 'Flight Search & Results',
+        tag: 'Flights',
+        description: 'Combined flight search form and live results list covering round-trip and one-way journeys between cities.',
+        Component: FlightSearch,
+      },
+      {
+        id: '12',
         title: 'Discover & Categories',
         tag: 'Discovery',
         description: 'Broader category browsing and destination discovery lists organized by architectural and heritage themes.',
         Component: Explore,
       },
       {
-        id: '11',
+        id: '13',
         title: 'Travio AI Assistant',
         tag: 'AI Feature',
         description: 'Conversational travel agent interface providing real-time personalized itineraries, activity advice, and action chips.',
@@ -118,42 +136,49 @@ const workflowGroups = [
     subtitle: 'Comprehensive monument & hotel details seamlessly transitioning into a multi-step reservation journey.',
     screens: [
       {
-        id: '12',
+        id: '14',
         title: 'Attraction Details',
         tag: 'Destination',
         description: 'In-depth breakdown of historical landmarks with location metrics, community reviews, and image highlights.',
         Component: PlaceDetails,
       },
       {
-        id: '13',
+        id: '15',
         title: 'Luxury Stay Listing',
         tag: 'Accommodation',
         description: 'Detailed resort presentation highlighting premium room amenities, image galleries, and pricing per night.',
         Component: HotelDetails,
       },
       {
-        id: '14',
+        id: '16',
+        title: 'Guest Reviews',
+        tag: 'Social Proof',
+        description: 'Full reviews listing with traveler avatars, star ratings, and detailed feedback for a hotel or attraction.',
+        Component: Reviews,
+      },
+      {
+        id: '17',
         title: 'Booking: Dates & Rooms',
         tag: 'Step 1 of 3',
         description: 'Initial reservation step featuring intuitive stay date pickers and room/guest quantity selectors.',
         Component: HotelBookingStep1,
       },
       {
-        id: '15',
+        id: '18',
         title: 'Booking: Guest Details',
         tag: 'Step 2 of 3',
         description: 'Second booking phase collecting structured traveler details, special requests, and direct contact information.',
         Component: HotelBookingStep2,
       },
       {
-        id: '16',
+        id: '19',
         title: 'Booking: Payment & Review',
         tag: 'Step 3 of 3',
         description: 'Final checkout step displaying payment choice cards and a detailed fare breakdown before confirmation.',
         Component: HotelBookingStep3,
       },
       {
-        id: '17',
+        id: '20',
         title: 'Reservation Confirmed',
         tag: 'Success',
         description: 'Gratifying post-booking success screen presenting booking reference IDs and quick access to itineraries.',
@@ -167,28 +192,35 @@ const workflowGroups = [
     subtitle: 'Personalized bookmarks, upcoming trip schedules, alert feeds, and comprehensive account management.',
     screens: [
       {
-        id: '18',
+        id: '21',
         title: 'Saved Wishlists',
         tag: 'Favorites',
         description: 'Curated list of favorited hotels and landmarks saved by the user for future travel planning.',
         Component: SavedPlaces,
       },
       {
-        id: '19',
+        id: '22',
+        title: 'Saved Wishlists: Empty State',
+        tag: 'UI State',
+        description: 'Friendly empty-state screen encouraging travelers to start bookmarking hotels and landmarks they love.',
+        Component: SavedPlacesEmpty,
+      },
+      {
+        id: '23',
         title: 'Trip Itinerary Manager',
         tag: 'Management',
         description: 'Organized trip timeline separating upcoming holiday schedules from completed past travel history.',
         Component: MyTrips,
       },
       {
-        id: '20',
+        id: '24',
         title: 'Activity & Alert Feed',
         tag: 'Notifications',
         description: 'Real-time updates on price drops, AI recommendations, itinerary alerts, and social interactions.',
         Component: Notifications,
       },
       {
-        id: '21',
+        id: '25',
         title: 'User Account & Settings',
         tag: 'Account',
         description: 'Central user profile displaying travel stats, followers, editing preferences, and system logout options.',

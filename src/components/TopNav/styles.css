@@ -1,0 +1,248 @@
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  height: var(--nav-height);
+  padding: 0 24px;
+  /* Translucent + blurred so content scrolling beneath reads as depth,
+     but opaque enough to stay legible over the dark Section 03. */
+  background-color: rgba(255, 255, 255, 0.82);
+  backdrop-filter: saturate(180%) blur(16px);
+  -webkit-backdrop-filter: saturate(180%) blur(16px);
+  border-bottom: 1px solid rgba(112, 157, 148, 0.16);
+  transition: background-color 0.35s ease, border-color 0.35s ease;
+}
+
+/* Dark variant — applied while Section 03 sits beneath the bar. */
+.top-nav-dark {
+  background-color: rgba(26, 36, 47, 0.82);
+  border-bottom-color: rgba(112, 157, 148, 0.28);
+}
+
+/* Side rails flex equally so the centre nav stays optically centred. */
+.top-nav-side {
+  display: flex;
+  align-items: center;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.top-nav-side-end {
+  justify-content: flex-end;
+}
+
+/* ---------- Brand ---------- */
+
+.top-nav-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  padding: 4px;
+  border-radius: 12px;
+  transition: opacity 0.2s ease;
+}
+
+.top-nav-brand:hover {
+  opacity: 0.78;
+}
+
+.top-nav-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  background: linear-gradient(135deg, var(--primary-500), var(--primary-700));
+  color: var(--white);
+  box-shadow: 0 4px 10px rgba(112, 157, 148, 0.32);
+  flex-shrink: 0;
+}
+
+.top-nav-wordmark {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--primary-950);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.top-nav-sub {
+  font-family: var(--font-body);
+  font-size: 9px;
+  font-weight: 500;
+  color: var(--primary-500);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+
+/* ---------- Centre segmented links ---------- */
+
+.top-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px;
+  border-radius: 999px;
+  background-color: rgba(240, 245, 244, 0.85);
+  border: 1px solid rgba(112, 157, 148, 0.14);
+  flex-shrink: 0;
+}
+
+.top-nav-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 15px;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary-700);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.top-nav-links a svg {
+  color: var(--primary-500);
+  transition: color 0.2s ease;
+}
+
+.top-nav-links a:hover {
+  background-color: var(--white);
+  color: var(--primary-950);
+  box-shadow: 0 2px 8px rgba(26, 36, 47, 0.08);
+}
+
+.top-nav-links a:hover svg {
+  color: var(--brand-action);
+}
+
+/* ---------- Right meta badge ---------- */
+
+.top-nav-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 13px;
+  border-radius: 999px;
+  background-color: var(--white);
+  border: 1px solid rgba(112, 157, 148, 0.22);
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--primary-600);
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.top-nav-badge svg {
+  color: var(--primary-500);
+}
+
+/* ---------- Dark variant overrides ---------- */
+
+.top-nav-wordmark,
+.top-nav-sub,
+.top-nav-links,
+.top-nav-links a,
+.top-nav-links a svg,
+.top-nav-badge,
+.top-nav-badge svg {
+  transition: background-color 0.35s ease, border-color 0.35s ease, color 0.35s ease;
+}
+
+.top-nav-dark .top-nav-wordmark {
+  color: var(--white);
+}
+
+.top-nav-dark .top-nav-sub {
+  color: var(--primary-400);
+}
+
+.top-nav-dark .top-nav-links {
+  background-color: rgba(52, 73, 94, 0.55);
+  border-color: rgba(112, 157, 148, 0.24);
+}
+
+.top-nav-dark .top-nav-links a {
+  color: var(--primary-200);
+}
+
+.top-nav-dark .top-nav-links a svg {
+  color: var(--primary-400);
+}
+
+.top-nav-dark .top-nav-links a:hover {
+  background-color: var(--primary-800);
+  color: var(--white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);
+}
+
+.top-nav-dark .top-nav-links a:hover svg {
+  color: var(--primary-300);
+}
+
+.top-nav-dark .top-nav-badge {
+  background-color: rgba(52, 73, 94, 0.5);
+  border-color: rgba(112, 157, 148, 0.28);
+  color: var(--primary-200);
+}
+
+.top-nav-dark .top-nav-badge svg {
+  color: var(--primary-400);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1080px) {
+  /* Drop the decorative right badge first; keep brand + navigation. */
+  .top-nav-side-end {
+    display: none;
+  }
+
+  .top-nav-side {
+    flex: 0 1 auto;
+  }
+
+  .top-nav {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 780px) {
+  .top-nav {
+    gap: 12px;
+    padding: 0 16px;
+  }
+
+  .top-nav-sub {
+    display: none;
+  }
+
+  /* Icon-only segmented control so the nav never wraps or overflows. */
+  .top-nav-links a {
+    padding: 8px 11px;
+  }
+
+  .top-nav-links a span {
+    display: none;
+  }
+
+  .top-nav-links a svg {
+    color: var(--primary-700);
+  }
+
+  .top-nav-dark .top-nav-links a svg {
+    color: var(--primary-200);
+  }
+}

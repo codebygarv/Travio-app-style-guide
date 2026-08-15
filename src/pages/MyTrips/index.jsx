@@ -1,10 +1,11 @@
-import { ChevronLeft, Calendar, MapPin, ArrowRight } from 'lucide-react';
+import { Calendar, MapPin, ArrowRight } from 'lucide-react';
+import BackButton from '../../components/BackButton';
 import './styles.css';
 
 const MyTrips = () => (
   <div className="app-screen trips-screen">
     <header className="trips-header">
-      <button className="back-btn"><ChevronLeft size={20} /></button>
+      <BackButton />
       <h2>My Trips</h2>
       <div style={{ width: 40 }}></div>
     </header>

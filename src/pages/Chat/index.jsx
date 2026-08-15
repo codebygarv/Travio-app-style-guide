@@ -1,10 +1,11 @@
-import { ChevronLeft, MoreHorizontal, Send, Sparkles } from 'lucide-react';
+import { MoreHorizontal, Send, Sparkles } from 'lucide-react';
+import BackButton from '../../components/BackButton';
 import './styles.css';
 
 const Chat = () => (
   <div className="app-screen chat-screen">
     <header className="chat-header">
-      <button className="back-btn"><ChevronLeft size={20} /></button>
+      <BackButton />
       <div className="chat-title-group">
         <h2>Travio AI</h2>
       </div>

@@ -19,11 +19,25 @@
   --brand-action: #709D94;
   --brand-secondary: #DCE8E6;
   --brand-dark: #2C3E50;
+  --rating-color: #F59E0B;
 
   /* Typography Families */
-  --font-heading: 'Manrope', sans-serif; 
+  --font-heading: 'Manrope', sans-serif;
   --font-editorial: 'Playfair Display', serif;
   --font-body: 'Outfit', sans-serif;
+
+  /* Page Chrome */
+  --nav-height: 64px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 /* Theme Scoping to Device */

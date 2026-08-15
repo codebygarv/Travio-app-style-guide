@@ -3,7 +3,7 @@ import '../Section02/styles.css';
 import './styles.css';
 
 const Section01 = () => (
-  <div className="presentation-canvas">
+  <div id="style-guide" className="presentation-canvas">
     {/* Left Content Area */}
     <div className="presentation-text">
       <h4>Section 01</h4>

@@ -1,10 +1,11 @@
-import { ChevronLeft, Check, User, Users, Baby, Wallet, Coins, Gem, Coffee, Zap } from 'lucide-react';
+import { Check, User, Users, Baby, Wallet, Coins, Gem, Coffee, Zap } from 'lucide-react';
+import BackButton from '../../components/BackButton';
 import './styles.css';
 
 const Preferences = () => (
   <div className="app-screen pref-screen-premium">
     <header className="pref-header-premium">
-      <button className="back-btn"><ChevronLeft size={20} /></button>
+      <BackButton />
       <h2>Travel Settings</h2>
       <div style={{ width: 40 }}></div>
     </header>

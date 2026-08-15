@@ -14,7 +14,7 @@ const OTP = () => (
       <div className="otp-inputs">
         <input type="text" maxLength="1" className="otp-input filled" defaultValue="4" />
         <input type="text" maxLength="1" className="otp-input filled" defaultValue="2" />
-        <input type="text" maxLength="1" className="otp-input focused" defaultValue="" autoFocus />
+        <input type="text" maxLength="1" className="otp-input focused" defaultValue="" />
         <input type="text" maxLength="1" className="otp-input" />
       </div>
       

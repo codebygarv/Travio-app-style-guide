@@ -2,7 +2,7 @@ import ScreenShowcase from '../Section02/ScreenShowcase';
 import '../Section02/styles.css';
 
 const Section03 = () => (
-  <div className="presentation-canvas bg-dark">
+  <div id="dark-flow" className="presentation-canvas bg-dark">
     <div className="presentation-text">
       <h4>Section 03</h4>
       <h1>Application Flow (Dark Theme)</h1>

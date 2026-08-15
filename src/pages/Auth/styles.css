@@ -36,19 +36,19 @@
   margin-bottom: 32px;
 }
 
-.input-group {
+.auth-screen .input-group {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-.input-icon {
+.auth-screen .input-icon {
   position: absolute;
   left: 16px;
   color: var(--primary-500);
 }
 
-.form-input {
+.auth-screen .form-input {
   width: 100%;
   padding: 16px 16px 16px 44px;
   border-radius: 16px;
@@ -61,7 +61,7 @@
   outline: none;
 }
 
-.form-input:focus {
+.auth-screen .form-input:focus {
   border-color: var(--brand-action);
   box-shadow: 0 0 0 3px rgba(112, 157, 148, 0.1);
 }

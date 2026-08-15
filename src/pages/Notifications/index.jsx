@@ -1,10 +1,11 @@
-import { ChevronLeft, TrendingDown, CalendarClock, Bell } from 'lucide-react';
+import { TrendingDown, CalendarClock, Bell } from 'lucide-react';
+import BackButton from '../../components/BackButton';
 import './styles.css';
 
 const Notifications = () => (
   <div className="app-screen notif-screen-premium">
     <header className="notif-header-premium">
-      <button className="back-btn"><ChevronLeft size={20} /></button>
+      <BackButton />
       <h2>Notifications</h2>
       <div style={{ width: 40 }}></div>
     </header>

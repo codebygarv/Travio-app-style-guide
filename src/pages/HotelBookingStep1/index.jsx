@@ -1,11 +1,12 @@
-import { ChevronLeft, Users, Minus, Plus, Coffee, Utensils, UtensilsCrossed, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Users, Minus, Plus, Coffee, Utensils, UtensilsCrossed, CheckCircle2, ArrowRight } from 'lucide-react';
+import BackButton from '../../components/BackButton';
 import './styles.css';
 
 const HotelBookingStep1 = () => (
   <div className="app-screen booking-screen">
-    
+
     <header className="booking-header">
-      <button className="back-btn"><ChevronLeft size={20} /></button>
+      <BackButton />
       <div className="header-title">
         <h2>Booking Details</h2>
         <span>Step 1 of 3</span>

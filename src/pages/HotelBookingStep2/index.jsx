@@ -1,12 +1,12 @@
-import { ChevronLeft } from 'lucide-react';
+import BackButton from '../../components/BackButton';
 import '../HotelBookingStep1/styles.css'; // Reuse common layout styles
 import './styles.css';
 
 const HotelBookingStep2 = () => (
   <div className="app-screen booking-screen">
-    
+
     <header className="booking-header">
-      <button className="back-btn"><ChevronLeft size={20} /></button>
+      <BackButton />
       <div className="header-title">
         <h2>Guest Details</h2>
         <span>Step 2 of 3</span>

@@ -1,12 +1,13 @@
-import { ChevronLeft, CreditCard, Building2, Wallet } from 'lucide-react';
+import { CreditCard, Building2, Wallet } from 'lucide-react';
+import BackButton from '../../components/BackButton';
 import '../HotelBookingStep1/styles.css'; // Common layout
 import './styles.css';
 
 const HotelBookingStep3 = () => (
   <div className="app-screen booking-screen">
-    
+
     <header className="booking-header">
-      <button className="back-btn"><ChevronLeft size={20} /></button>
+      <BackButton />
       <div className="header-title">
         <h2>Payment</h2>
         <span>Step 3 of 3</span>
