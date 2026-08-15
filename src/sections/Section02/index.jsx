@@ -2,7 +2,7 @@ import ScreenShowcase from './ScreenShowcase';
 import './styles.css';
 
 const Section02 = () => (
-  <div className="presentation-canvas bg-alt">
+  <div id="light-flow" className="presentation-canvas bg-alt">
     <div className="presentation-text">
       <h4>Section 02</h4>
       <h1>Application Flow (Light Theme)</h1>

@@ -1,0 +1,7 @@
+.rating {
+  font-weight: 700;
+  color: var(--rating-color);
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}

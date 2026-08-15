@@ -1,5 +1,11 @@
-import { ChevronLeft, Heart, Star, MapPin, Wifi, Coffee, Wind, Bath, CheckCircle2, ChevronRight } from 'lucide-react';
+import { Heart, MapPin, Wifi, Coffee, Wind, Bath, CheckCircle2, ChevronRight } from 'lucide-react';
+import BackButton from '../../components/BackButton';
+import Rating from '../../components/Rating';
+import Card from '../../components/Card';
+import { hotels } from '../../data/places';
 import './styles.css';
+
+const currentHotelId = 'taj-jai-mahal';
 
 const HotelDetails = () => (
   <div className="app-screen hotel-details-screen">
@@ -10,7 +16,7 @@ const HotelDetails = () => (
         <div className="hotel-hero-image" style={{ backgroundImage: 'url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/7d/ce/31/jai-mahal-palace.jpg?w=700&h=-1&s=1")' }}>
           <div className="hotel-image-overlay"></div>
         <div className="hotel-top-bar">
-          <button className="back-btn"><ChevronLeft size={20} /></button>
+          <BackButton />
           <button className="back-btn"><Heart size={24} /></button>
           </div>
           
@@ -22,13 +28,13 @@ const HotelDetails = () => (
           <div className="title-row">
             <h1>Taj Jai Mahal Palace</h1>
             <div className="hotel-rating">
-              <Star size={14} fill="#F59E0B" color="#F59E0B" />
-              <span>4.9</span>
+              <Rating value={4.9} size={14} />
             </div>
           </div>
           <p className="hotel-location">
             <MapPin size={14} /> Civil Lines, Jaipur (3.2 km from center)
           </p>
+          <span className="review-link">See all 2,148 reviews</span>
         </div>
 
         {/* Highlights */}
@@ -86,21 +92,17 @@ const HotelDetails = () => (
             <span className="read-more" style={{ fontSize: '13px', color: 'var(--brand-action)', fontWeight: '700', cursor: 'pointer' }}>See More</span>
           </div>
           <div className="hotel-photos-scroll">
-            <div className="similar-hotel-card">
-              <div className="similar-image" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80")' }}></div>
-              <h4>Rambagh Palace</h4>
-              <p>₹25,000 / night</p>
-            </div>
-            <div className="similar-hotel-card">
-              <div className="similar-image" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1551882547-ff40c0d129df?auto=format&fit=crop&w=400&q=80")' }}></div>
-              <h4>Oberoi Rajvilas</h4>
-              <p>₹32,000 / night</p>
-            </div>
-            <div className="similar-hotel-card">
-              <div className="similar-image" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=400&q=80")' }}></div>
-              <h4>ITC Rajputana</h4>
-              <p>₹15,000 / night</p>
-            </div>
+            {hotels
+              .filter((hotel) => hotel.id !== currentHotelId)
+              .map((hotel) => (
+                <Card
+                  key={hotel.id}
+                  className="similar-hotel-card-mod"
+                  image={hotel.image}
+                  title={hotel.name}
+                  price={`₹${hotel.pricePerNight.toLocaleString('en-IN')} / night`}
+                />
+              ))}
           </div>
         </div>
 

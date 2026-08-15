@@ -1,12 +1,13 @@
-import { ChevronLeft, Search, X, Clock, TrendingUp, MapPin } from 'lucide-react';
+import { Search, X, Clock, TrendingUp, MapPin } from 'lucide-react';
+import BackButton from '../../components/BackButton';
 import './styles.css';
 
 const SearchActive = () => (
   <div className="app-screen search-active-screen">
-    
+
     {/* Active Search Header */}
     <div className="search-active-header">
-      <button className="back-btn"><ChevronLeft size={20} /></button>
+      <BackButton />
       <div className="search-active-input-wrapper">
         <Search size={18} className="search-icon-active" />
         <input 
@@ -14,7 +15,6 @@ const SearchActive = () => (
           placeholder="Search places, hotels..." 
           className="search-active-input"
           defaultValue="Jaipur"
-          autoFocus 
         />
         <button className="icon-btn-ghost clear-btn"><X size={16} /></button>
       </div>

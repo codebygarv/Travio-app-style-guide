@@ -1,5 +1,11 @@
-import { ChevronLeft, Heart, MapPin } from 'lucide-react';
+import { Heart, MapPin } from 'lucide-react';
+import BackButton from '../../components/BackButton';
+import Card from '../../components/Card';
+import { hotels, attractions } from '../../data/places';
 import './styles.css';
+
+const nearbyHotelIds = ['rambagh-palace', 'taj-jai-mahal'];
+const nearbyAttractionIds = ['jantar-mantar', 'bapu-bazaar'];
 
 const PlaceDetails = () => (
   <div className="app-screen details-screen">
@@ -10,7 +16,7 @@ const PlaceDetails = () => (
         <div className="hero-image" style={{ backgroundImage: 'url("https://www.indiasinvitation.com/wp-content/uploads/2016/09/Hawa-Mahal.jpg")' }}>
           <div className="place-image-overlay"></div>
         <div className="place-top-bar">
-          <button className="back-btn"><ChevronLeft size={20} /></button>
+          <BackButton />
           <button className="glass-btn"><Heart size={24} /></button>
           </div>
 
@@ -45,6 +51,8 @@ const PlaceDetails = () => (
         </div>
       </div>
 
+      <span className="review-link">See all 892 reviews</span>
+
       {/* Description Section */}
       <div className="description-section">
         <h2>Description</h2>
@@ -59,20 +67,17 @@ const PlaceDetails = () => (
           <h2>Stays Near Hawa Mahal</h2>
         </div>
         <div className="horizontal-scroll">
-          <div className="mini-card">
-            <div className="mini-image bg-hotel1"></div>
-            <div className="mini-info">
-              <h3>Rambagh Palace</h3>
-              <p>₹25,000/night</p>
-            </div>
-          </div>
-          <div className="mini-card">
-            <div className="mini-image bg-hotel2"></div>
-            <div className="mini-info">
-              <h3>Taj Jai Mahal</h3>
-              <p>₹18,500/night</p>
-            </div>
-          </div>
+          {hotels
+            .filter((hotel) => nearbyHotelIds.includes(hotel.id))
+            .map((hotel) => (
+              <Card
+                key={hotel.id}
+                className="mini-card-mod"
+                image={hotel.image}
+                title={hotel.name}
+                price={`₹${hotel.pricePerNight.toLocaleString('en-IN')}/night`}
+              />
+            ))}
         </div>
       </div>
 
@@ -82,20 +87,17 @@ const PlaceDetails = () => (
           <h2>Explore Nearby</h2>
         </div>
         <div className="horizontal-scroll">
-          <div className="mini-card">
-            <div className="mini-image bg-jantar"></div>
-            <div className="mini-info">
-              <h3>Jantar Mantar</h3>
-              <p>0.8 km away</p>
-            </div>
-          </div>
-          <div className="mini-card">
-            <div className="mini-image bg-bazaar"></div>
-            <div className="mini-info">
-              <h3>Bapu Bazaar</h3>
-              <p>1.2 km away</p>
-            </div>
-          </div>
+          {attractions
+            .filter((place) => nearbyAttractionIds.includes(place.id))
+            .map((place) => (
+              <Card
+                key={place.id}
+                className="mini-card-mod"
+                image={place.image}
+                title={place.name}
+                price={`${place.distance} away`}
+              />
+            ))}
         </div>
       </div>
 

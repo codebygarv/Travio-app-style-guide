@@ -178,6 +178,16 @@
   cursor: pointer;
 }
 
+.review-link {
+  display: block;
+  padding: 0 24px;
+  margin: -20px 0 32px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--brand-action);
+  cursor: pointer;
+}
+
 /* Bottom Action */
 .details-bottom-action {
   padding: 0 24px;
@@ -217,41 +227,17 @@
 }
 .horizontal-scroll::-webkit-scrollbar { display: none; }
 
-.mini-card {
+/* Card size override: mini-cards use a 160px 4:3 image (same radius as
+   Card's default) plus a brand-green price line instead of the neutral
+   secondary-text default. */
+.mini-card-mod {
   width: 160px;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
 }
 
-.mini-image {
-  width: 100%;
+.mini-card-mod .card-image {
   aspect-ratio: 4/3;
-  border-radius: 16px;
-  background-size: cover;
-  background-position: center;
-  border: 1px solid var(--border-color);
 }
 
-.mini-image.bg-hotel1 { background-image: url('https://images.unsplash.com/photo-1542314831-c6a4203251ab?auto=format&fit=crop&w=400&q=80'); }
-.mini-image.bg-hotel2 { background-image: url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=400&q=80'); }
-.mini-image.bg-jantar { background-image: url('https://images.unsplash.com/photo-1622285150244-a0dc5c69745e?auto=format&fit=crop&w=400&q=80'); }
-.mini-image.bg-bazaar { background-image: url('https://images.unsplash.com/photo-1517400508447-f8dd518b86db?auto=format&fit=crop&w=400&q=80'); }
-
-.mini-info h3 {
-  font-family: var(--font-heading);
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 2px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.mini-info p {
-  font-size: 12px;
+.mini-card-mod .card-price {
   color: var(--brand-action);
-  font-weight: 600;
 }
